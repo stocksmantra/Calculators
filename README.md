@@ -1,2 +1,2 @@
-# NSC_Calculator
+#
 Calculator

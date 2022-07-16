@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+body{
+    height: 100vh;
+    background-image: linear-gradient( rgb(0, 180, 207),rgb(184, 248, 255));
+}
+h1{
+ 
+    text-align: center;
+    font-family: sans-serif;
+    padding-top: 30px;
+    color: #ffffff;
+   
+    
+}
+
+.container{
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 90vw;
+    max-width: 600px;
+    min-width: 350px;
+    padding: 80px 40px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgb(132, 161, 176);
+}
+input{
+    width: 500px ;
+    margin-bottom: 20px;
+    border: none;
+    font-size: 18px;
+    border-bottom: 2px solid rgb(60, 59, 59);
+    color: rgb(50, 50, 50);
+}
+span{
+    width:100px ;
+    margin-left: 260px;
+
+    border-radius: 5px;
+    background-color: rgb(183, 237, 245);
+    padding: 0px 10px 0px 10px;
+}
+#serviceYear{
+  margin: 100px;
+  text-decoration: none;
+  margin-top: 100px;
+}
+input:focus{
+    outline: none;
+    border-bottom: 2.5px solid rgb(0, 180, 207);
+}
+.year{
+    margin-top: 0px;
+}
+.year p{
+    margin-top: 50px;
+}
+.year span{
+
+    display: none;
+}

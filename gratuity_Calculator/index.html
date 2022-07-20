@@ -6,55 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gratuity Calculator</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
 <body>
-    <h1 style="color: azure;">Gratuity Calculator</h1>
+    <h1 style="text-align: center;">Gratuity Calculator</h1>
     <div class="container">
+    Monthly salary (Basic+DA)<span id="output_1"></span><input type="number" min="10000" max="1000000" value="1000"
+        name="Monthly salary (Basic+DA) " id="salary">
+<br>
+    Years of service<span id="output_2"></span> <input type="number" min="5" max="50" value="1" name="Years of service"
+        id="years">
 
-        <p>Monthly Salary <span id="demo"></span></p>
-        <input type="range" min="1" max="10000000" value="5000000" class="slider" id="myRange" placeholder="₹">
 
-        <div class="year">
-            <p>Years of service <span id="serviceYear"></span></p>
-            <input type="number" min="1" max="100" value="5" class="year" id="useryear">
-
-        </div>
-        <p>Payable Gratuity <span id="output_1"></span></p>
-
-    </div>
-
+<br>
 
     <button onclick="answer()">Calculate</button>
-    </div>
-    <script>
-        var slider = document.getElementById("myRange");
-        var output = document.getElementById("demo");
-        output.innerHTML = slider.value;
-
-        slider.oninput = function () {
-            output.innerHTML = this.value;
-        }
-function answer(){
-    var myRange_input = parseInt(document.getElementById("myRange").value);
-    var useryear_input = parseInt(document.getElementById("useryear").value);
-
-    var payable_gratuity = useryear*myRange *15/26;
-
-    document.getElementById("output_1").innerHTML = useryear;
-}
-
-
-    </script>
+    <p>Total Gratuity payable:<br> <span id="outputt"></span></p>
+</div>
 </body>
+
+<script>
+    function answer() {
+
+
+        var b = parseInt(document.getElementById("salary").value);
+        var n = parseInt(document.getElementById("years").value);
+
+        var total_gratuity = n * b * 15 / 26;
+
+        document.getElementById("outputt").innerHTML = total_gratuity;
+    }
+</script>
 
 </html>

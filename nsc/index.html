@@ -18,15 +18,15 @@
         <input type="number" placeholder="Enter principal Amount" id="amount">
         <br>
         <!-- end principal amount  -->
-        <label for="rate">Rate (%)</label>
+        <label for="rate">Rate (6.8%)</label>
         <br>
-        <input type="number" placeholder="Enter Rate" id="rate">
+        <!-- <input type="number" placeholder="Enter Rate" id="rate"> -->
         <br>
         <!-- start time  -->
-        <label for="time">Time (yr)</label>
+        <label for="time">Time (5 yr)</label>
         <br>
 
-        <input type="number" placeholder="Enter Time" id="time">
+        <!-- <input type="number" placeholder="Enter Time" id="time"> -->
         <br>
         <button onclick="answer()">Calculate</button>
         <p>Principal Amount: <span id="output_1"></span></p>
@@ -38,13 +38,13 @@
             var amount_input = parseInt(document.getElementById("amount").value);
 
 
-            var rate_input = parseInt(document.getElementById("rate").value);
+            // var rate_input = parseInt(document.getElementById("rate").value);
 
 
-            var time_input = parseInt(document.getElementById("time").value);
+            // var time_input = parseInt(document.getElementById("time").value);
 
 
-            var interest = amount_input * rate_input * time_input / 100;
+            var interest =(amount_input* Math.pow(( 1+6.8 / 100),  5))-amount_input ;
 
             var total = interest + amount_input;
 
